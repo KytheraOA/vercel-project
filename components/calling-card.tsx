@@ -1,17 +1,37 @@
+import { faCat } from '@fortawesome/free-solid-svg-icons'
 import { ArrowUpRight } from 'lucide-react'
 
 const ACCENT = '#B9A3FF'
+const CAT_COLOR = 'rgb(116, 115, 118)'
+
+function CatIcon() {
+  const [width, height, , , path] = faCat.icon
+  return (
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      className="size-8 shrink-0"
+      fill={CAT_COLOR}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d={Array.isArray(path) ? path.join(' ') : path} />
+    </svg>
+  )
+}
 
 export function CallingCard() {
   return (
     <article className="w-full max-w-2xl">
       <header>
-        <p
-          className="font-mono text-xs uppercase tracking-[0.2em]"
-          style={{ color: ACCENT }}
-        >
-          Documentation Czar
-        </p>
+        <div className="flex items-center justify-between gap-4">
+          <p
+            className="font-mono text-xs uppercase tracking-[0.2em]"
+            style={{ color: ACCENT }}
+          >
+            Documentation Czar
+          </p>
+          <CatIcon />
+        </div>
         <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-neutral-50 sm:text-5xl">
           Kythera Contreras
         </h1>
