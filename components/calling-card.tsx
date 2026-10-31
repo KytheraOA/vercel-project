@@ -23,14 +23,14 @@ export function CallingCard() {
   return (
     <article className="w-full max-w-2xl">
       <header>
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <CatIcon />
           <p
             className="font-mono text-xs uppercase tracking-[0.2em]"
             style={{ color: ACCENT }}
           >
             Documentation Czar
           </p>
-          <CatIcon />
         </div>
         <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-neutral-50 sm:text-5xl">
           Kythera Contreras
